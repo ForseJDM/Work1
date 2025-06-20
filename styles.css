@@ -1,0 +1,178 @@
+/* Скрываем радиокнопки */
+input[type="radio"] {
+    display: none;
+  }
+  
+  /* Общие стили */
+  body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  header h1 {
+    margin: 0;
+  }
+  
+  header img {
+    border-radius: 50%;
+    margin-top: 10px;
+  }
+  
+  #theme-switcher {
+    margin-top: 10px;
+  }
+  
+  #theme-switcher label {
+    margin: 0 5px;
+    padding: 5px 10px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    padding-bottom: 60px;
+  }
+  
+  section {
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    padding-bottom: 5px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  .job {
+    margin-bottom: 20px;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  /* Стили для светлой темы */
+  #light:checked ~ .theme-container {
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  #light:checked ~ .theme-container header {
+    background-color: #2ecc71;
+    color: #fff;
+  }
+  
+  #light:checked ~ .theme-container h2 {
+    border-bottom: 2px solid #2ecc71;
+  }
+  
+  #light:checked ~ .theme-container footer {
+    background-color: #2ecc71;
+    color: #fff;
+  }
+  
+  #light:checked ~ .theme-container #theme-switcher label {
+    background-color: #2ecc71;
+  }
+  
+  #light:checked ~ .theme-container #theme-switcher label:hover {
+    background-color: #27ae60;
+  }
+  
+  /* Стили для тёмной темы */
+  #dark:checked ~ .theme-container {
+    background-color: #333;
+    color: #f4f4f4;
+  }
+  
+  #dark:checked ~ .theme-container header {
+    background-color: #2c3e50;
+    color: #fff;
+  }
+  
+  #dark:checked ~ .theme-container h2 {
+    border-bottom: 2px solid #ecf0f1;
+  }
+  
+  #dark:checked ~ .theme-container footer {
+    background-color: #2c3e50;
+    color: #fff;
+  }
+  
+  #dark:checked ~ .theme-container #theme-switcher label {
+    background-color: #2c3e50;
+  }
+  
+  #dark:checked ~ .theme-container #theme-switcher label:hover {
+    background-color: #34495e;
+  }
+  
+  /* Стили для цветной темы */
+  #colorful:checked ~ .theme-container {
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  #colorful:checked ~ .theme-container header {
+    background-color: #3498db;
+    color: #fff;
+  }
+  
+  #colorful:checked ~ .theme-container h2 {
+    border-bottom: 2px solid #3498db;
+  }
+  
+  #colorful:checked ~ .theme-container footer {
+    background-color: #3498db;
+    color: #fff;
+  }
+  
+  #colorful:checked ~ .theme-container #theme-switcher label {
+    background-color: #3498db;
+  }
+  
+  #colorful:checked ~ .theme-container #theme-switcher label:hover {
+    background-color: #2980b9;
+  }
+  
+  .easter-egg {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 32px;
+    height: 32px;
+    background: url('https://cdn-icons-png.flaticon.com/512/25/25231.png') no-repeat center/cover;
+    opacity: 0;
+    pointer-events: auto;
+    transition: opacity 0.3s;
+    z-index: 1000;
+  }
+  .easter-egg:hover {
+    opacity: 1;
+  }
+  body:hover .easter-egg {
+    opacity: 0.7;
+  }
