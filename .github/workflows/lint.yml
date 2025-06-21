@@ -18,7 +18,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18' # Или любую другую стабильную версию Node.js, которая вам подходит
+          node-version: '20' # Обновляем до Node.js 20
 
       - name: Install dependencies
         run: npm ci
