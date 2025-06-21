@@ -33,4 +33,4 @@ jobs:
         run: npx htmlhint .
 
       - name: Run Stylelint
-        run: npx stylelint "**/*.css" --cache --fix 
+        run: npx stylelint "**/*.css" --cache --fix
