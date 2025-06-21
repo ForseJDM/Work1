@@ -40,7 +40,9 @@
         "github",
         "GITHUB",
         "htmlhint",
-        "IDEF"
+        "IDEF",
+        "Ilya",
+        "stylelintcache"
     ],
     "cSpell.language": "ru,en",
     "cSpell.caseSensitive": true
