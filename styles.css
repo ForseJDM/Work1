@@ -94,14 +94,6 @@ input[type="radio"] {
     color: #fff;
   }
   
-  #light:checked ~ .theme-container #theme-switcher label {
-    background-color: #2ecc71;
-  }
-  
-  #light:checked ~ .theme-container #theme-switcher label:hover {
-    background-color: #27ae60;
-  }
-  
   /* Стили для тёмной темы */
   #dark:checked ~ .theme-container {
     background-color: #333;
@@ -120,14 +112,6 @@ input[type="radio"] {
   #dark:checked ~ .theme-container footer {
     background-color: #2c3e50;
     color: #fff;
-  }
-  
-  #dark:checked ~ .theme-container #theme-switcher label {
-    background-color: #2c3e50;
-  }
-  
-  #dark:checked ~ .theme-container #theme-switcher label:hover {
-    background-color: #34495e;
   }
   
   /* Стили для цветной темы */
@@ -150,8 +134,26 @@ input[type="radio"] {
     color: #fff;
   }
   
+  /* Grouped Theme switcher label styles for Stylelint compliance */
+  #light:checked ~ .theme-container #theme-switcher label {
+    background-color: #2ecc71;
+  }
+  
+  #dark:checked ~ .theme-container #theme-switcher label {
+    background-color: #2c3e50;
+  }
+  
   #colorful:checked ~ .theme-container #theme-switcher label {
     background-color: #3498db;
+  }
+  
+  /* Grouped Theme switcher label hover styles for Stylelint compliance */
+  #light:checked ~ .theme-container #theme-switcher label:hover {
+    background-color: #27ae60;
+  }
+  
+  #dark:checked ~ .theme-container #theme-switcher label:hover {
+    background-color: #34495e;
   }
   
   #colorful:checked ~ .theme-container #theme-switcher label:hover {
@@ -170,9 +172,11 @@ input[type="radio"] {
     transition: opacity 0.3s;
     z-index: 1000;
   }
+
   .easter-egg:hover {
     opacity: 1;
   }
+
   body:hover .easter-egg {
     opacity: 0.7;
   }
