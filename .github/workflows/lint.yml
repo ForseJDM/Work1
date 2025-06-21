@@ -1,0 +1,30 @@
+name: HTML/CSS Lint
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18' # Или любую другую стабильную версию Node.js, которая вам подходит
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run HTMLHint
+        run: npx htmlhint .
+
+      - name: Run Stylelint
+        run: npx stylelint "**/*.css" --cache --fix 
