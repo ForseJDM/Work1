@@ -1,0 +1,16 @@
+{
+  "name": "work1",
+  "version": "1.0.0",
+  "description": "Проектно технологичсекая работа",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server --open=index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.0"
+  }
+}

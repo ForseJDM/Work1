@@ -89,6 +89,13 @@
         <p>Водительское удостоверение категории B</p>
         <p>Уверенный пользователь ПК</p>
       </section>
+
+      <!-- Раздел для демонстрации отладки -->
+      <section id="debug-demo" style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #ccc;">
+        <h2>Демонстрация Отладки</h2>
+        <button id="myButton" style="padding: 10px 20px; font-size: 16px; cursor: pointer;">Нажми меня</button>
+        <p id="message" style="margin-top: 10px; font-size: 18px; color: #333;"></p>
+      </section>
     </main>
 
     <footer>
@@ -96,5 +103,23 @@
     </footer>
   </div>
   <a href="rickroll.html" class="easter-egg" title="Пасхалка"></a>
+  <script>
+    let count = 0; // Переменная для отладки
+
+    document.getElementById('myButton').addEventListener('click', function() {
+      count++;
+      const text = `Кнопка нажата ${count} раз.`; // Точка останова здесь
+      document.getElementById('message').textContent = text;
+      console.log(text);
+
+      if (count % 2 === 0) {
+        console.log("Это четное нажатие!");
+      } else {
+        console.log("Это нечетное нажатие.");
+      }
+    });
+
+    console.log("Скрипт загружен.");
+  </script>
 </body>
 </html>
